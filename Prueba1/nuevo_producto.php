@@ -9,14 +9,29 @@
 	<h1>Resgistro de productos</h1>
 
 <form  method="post" >
-
-<input type="text" name ="codigo" >
-<input type ="text" name ="nombre">
-<input type ="text" name="tipo">
-<input type="text"  name="stock">
-<input type="text"  name="precio">
-<button>Resgitrar</button>
-
+<center>
+     <div>
+     <label>Código : <input type="text"  name="codigo" required ="required"  /></label>
+     </div>
+     <br>
+     <div>
+     <label>Nombre : <input type="text" name="nombre" required ="required"  /></label>
+     </div>
+     <br>
+     <div>
+     <label>Tipo : <input type ="text" name = "tipo"  required ="required"></label>
+     </div>
+     <br>
+     <div>
+     <label>Stock : <input type ="text" name = "stock"  required ="required"></label>
+     </div>
+     <br>
+     <div>
+     <label>Precio : <input type ="text" name = "precio"  required ="required"></label>
+     </div>
+     </center>
+      <br>
+      <center><input type="submit" value="REGISTRAR"/> </center>
 
 </form>
 </body>
