@@ -1,7 +1,7 @@
 <?php 
 include('../common/utils.php');
 
-function validar($pass,$pass1){
+/*function validar($pass,$pass1){
     if ($pass == $pass1) {
         echo '<pre>';
         echo "Contraseñas validas";
@@ -15,16 +15,21 @@ function validar($pass,$pass1){
     
     }
     
-    }
+    }*/
     
     
 
 if($_POST) {
-	if (isset($_POST['tienda']) && isset($_POST['user']) && isset($_POST['pass']) && !empty($_POST['tienda']) && !empty($_POST['user'])) {
-        $id = 0;
+    if (isset($_POST['tienda']) && isset($_POST['user']) && isset($_POST['pass']) && isset($_POST['pass1']) 
+         && !empty($_POST['tienda']) && !empty($_POST['user']) && !empty($_POST['pass']) && !empty($_POST['pass1'])) {
+       // $id = 0;
+// variables que van a la BDD
         $tienda = $_POST['tienda'];
         $username = $_POST['user'];
-		$password = $_POST['pass'];
+        $password = $_POST['pass'];
+        $password1 = $_POST['pass1'];
+
+        
 		$sql_insert = "INSERT INTO tienda
 		(id,nombre,usr,clave)
 		VALUES ('$id','$tienda','$username', MD5('$password'))";
@@ -35,9 +40,9 @@ if($_POST) {
 		if ($conn->error) {
 			echo 'Ocurrió un error ' . $conn->error;
 		} else {
-            $id++;
-            echo "suma";
-            validar($_REQUEST['pass'],$_REQUEST['pass1']);
+            //$id++;
+            //echo "suma";
+            //validar($_REQUEST['pass'],$_REQUEST['pass1']);
 			redirect('../index.php');
         }
       

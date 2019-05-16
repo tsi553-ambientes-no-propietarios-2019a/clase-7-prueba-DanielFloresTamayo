@@ -9,7 +9,7 @@ include('common/utils.php')
         <h1 //align = "center">LOGIN</h1>
 	</head>
 	<body>
-<form method="post">
+<form action = 'php/process_login.php' method="POST">
      <center>
      <div>
      <label>Usuario : <input type="text" name="user" required ="required" placeholder="Usuario"></label>
